@@ -12,7 +12,7 @@ class Kudos(commands.Cog):
         self.data.register_member(**default_member)
 
     @commands.group(invoke_without_command=True)
-    async def kudos(self, ctx, user: discord.Member, amount: str):
+    async def kudos(self, ctx, amount: str, user: discord.Member):
         """Give or check kudos for a user."""
         if ctx.author == user:
             return await ctx.send("You can't give yourself kudos!")
